@@ -3,6 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
+        - 'echo "--- DIAGNOSTIC: matching env vars ---"'
+        - 'env | grep -E "^(AWS_REGION|GUESTS_TABLE_NAME|REGISTRY_TABLE_NAME|CONTENT_TABLE_NAME|FAQ_TABLE_NAME)=" || echo "NONE FOUND"'
+        - 'echo "--- END DIAGNOSTIC ---"'
         - npm ci
     build:
       commands:
