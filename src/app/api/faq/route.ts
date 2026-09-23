@@ -14,9 +14,15 @@ interface FaqRecord {
 }
 
 export async function GET() {
-  const result = await ddbDocClient.send(
-    new ScanCommand({ TableName: TABLE_NAME })
-  );
+  let result;
+  try {
+    result = await ddbDocClient.send(
+      new ScanCommand({ TableName: TABLE_NAME })
+    );
+  } catch (error) {
+    console.error("Failed to scan Faq table", error);
+    return NextResponse.json({ error: "Failed to load FAQ" }, { status: 500 });
+  }
 
   const items = ((result.Items ?? []) as FaqRecord[]).sort(
     (a, b) => a.sort_order - b.sort_order

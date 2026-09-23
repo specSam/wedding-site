@@ -212,8 +212,9 @@ const mockGuest: Guest = {
               disabled={status !== "attending"}
               onChange={(event) => {
                 const value = Number(event.target.value);
+                const max = Number(guest.allowed_guests) || 1;
                 setGuestCount(
-                  Math.max(1, Math.min(value, guest.allowed_guests))
+                  Math.max(1, Math.min(Number.isNaN(value) ? 1 : value, max))
                 );
               }}
               className="mt-1 w-full rounded border border-moss/40 bg-white/70 px-3 py-2 text-pine disabled:bg-moss/10 disabled:text-moss/40 focus:border-forest focus:outline-none"

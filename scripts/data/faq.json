@@ -2,31 +2,37 @@
   {
     "faq_id": "faq-001",
     "question": "What should I wear?",
-    "answer": "Cocktail attire is suggested.",
+    "answer": "Our wedding is one for fantastical glory! Wear your best fantasy cosplay/attire. If you feel uncomfortable wearing fantasy attire, traditional wedding attire (suits dresses) are acceptable.",
     "sort_order": 1
+  },
+  {
+    "faq_id": "faq-004",
+    "question": "Is this a child free wedding?",
+    "answer": "By Odin's beard no!  We welcome all adventurers of all ages!",
+    "sort_order": 2
   },
   {
     "faq_id": "faq-002",
     "question": "Can I bring a plus-one?",
-    "answer": "Please check your invitation — it will indicate how many guests are included.",
-    "sort_order": 2
+    "answer": "The glorious halls of our union can only fit so many people! We have granted those with families/partners a number of guests they may RSVP for.",
+    "sort_order": 3
   },
   {
     "faq_id": "faq-003",
     "question": "Will there be an open bar?",
-    "answer": "Yes — beer, wine, and a few signature cocktails will be available all evening.",
-    "sort_order": 3
+    "answer": "We will not have alcohol and encourage people to instead enjoy the mocktender we have conscripted to serve drinks after the ceremony and during the reception!",
+    "sort_order": 4
   },
   {
     "faq_id": "venue-location",
     "question": "Where is the venue?",
-    "answer": "{\"address\":\"123 Placeholder Ave, Springfield, ST 12345\"}",
-    "sort_order": 4
+    "answer": "{\"address\":\"10790 N 49th St, Longmont, CO 80503\"}",
+    "sort_order": 5
   },
   {
     "faq_id": "day-schedule",
     "question": "What's the day-of schedule?",
-    "answer": "{\"items\":[{\"time\":\"3:30 PM\",\"label\":\"Guest arrival\"},{\"time\":\"4:00 PM\",\"label\":\"Ceremony\"},{\"time\":\"4:30 PM\",\"label\":\"Cocktail hour\"},{\"time\":\"5:30 PM\",\"label\":\"Reception & dinner\"},{\"time\":\"9:00 PM\",\"label\":\"Send-off\"}]}",
-    "sort_order": 5
+    "answer": "{\"items\":[{\"time\":\"10:00 AM\",\"label\":\"Guest arrival\"},{\"time\":\"10:30AM\",\"label\":\"Ceremony\"},{\"time\":\"11:00PM\",\"label\":\"Mocktail hour\"},{\"time\":\"12:00PM\",\"label\":\"Reception & lunch\"},{\"time\":\"2:30 PM\",\"label\":\"Send off!\"}]}",
+    "sort_order": 6
   }
 ]
