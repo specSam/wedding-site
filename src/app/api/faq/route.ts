@@ -4,7 +4,7 @@ import { PutCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
 import { ddbDocClient } from "@/lib/dynamodb";
 import { requireAdmin } from "@/lib/adminAuth";
 
-const TABLE_NAME = process.env.FAQ_TABLE_NAME || "Faq";
+const TABLE_NAME = process.env.FAQ_TABLE_NAME || "FAQ";
 
 interface FaqRecord {
   faq_id: string;
@@ -14,7 +14,6 @@ interface FaqRecord {
 }
 
 export async function GET() {
-  console.log(process.env.FAQ_TABLE_NAME);
   let result;
   try {
     result = await ddbDocClient.send(

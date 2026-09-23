@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { GetCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
 import { ddbDocClient } from "@/lib/dynamodb";
 
-const CONTENT_TABLE_NAME = process.env.CONTENT_TABLE_NAME || "Content";
+const CONTENT_TABLE_NAME = process.env.CONTENT_TABLE_NAME || "AboutUs";
 const GUESTS_TABLE_NAME = process.env.GUESTS_TABLE_NAME || "Guests";
 const CONTENT_ID = "story";
 
