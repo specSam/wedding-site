@@ -1,0 +1,32 @@
+[
+  {
+    "faq_id": "faq-001",
+    "question": "What should I wear?",
+    "answer": "Cocktail attire is suggested.",
+    "sort_order": 1
+  },
+  {
+    "faq_id": "faq-002",
+    "question": "Can I bring a plus-one?",
+    "answer": "Please check your invitation — it will indicate how many guests are included.",
+    "sort_order": 2
+  },
+  {
+    "faq_id": "faq-003",
+    "question": "Will there be an open bar?",
+    "answer": "Yes — beer, wine, and a few signature cocktails will be available all evening.",
+    "sort_order": 3
+  },
+  {
+    "faq_id": "venue-location",
+    "question": "Where is the venue?",
+    "answer": "{\"address\":\"123 Placeholder Ave, Springfield, ST 12345\"}",
+    "sort_order": 4
+  },
+  {
+    "faq_id": "day-schedule",
+    "question": "What's the day-of schedule?",
+    "answer": "{\"items\":[{\"time\":\"3:30 PM\",\"label\":\"Guest arrival\"},{\"time\":\"4:00 PM\",\"label\":\"Ceremony\"},{\"time\":\"4:30 PM\",\"label\":\"Cocktail hour\"},{\"time\":\"5:30 PM\",\"label\":\"Reception & dinner\"},{\"time\":\"9:00 PM\",\"label\":\"Send-off\"}]}",
+    "sort_order": 5
+  }
+]

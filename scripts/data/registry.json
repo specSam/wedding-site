@@ -1,0 +1,9 @@
+[
+  {
+    "item_id": "item-001",
+    "item_name": "Example Registry Item",
+    "item_url": "https://example.com/product",
+    "item_price": 49.99,
+    "image_url": "https://example.com/image.jpg"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "guest_id": "Stech-Joe",
+    "name": "Stech",
+    "email": "jane@example.com",
+    "allowed_guests": 4
+  },
+  {
+    "guest_id": "Wubbenas",
+    "name": "Anna",
+    "email": "john@example.com",
+    "allowed_guests": 1,
+    "is_admin": true
+  }
+]
