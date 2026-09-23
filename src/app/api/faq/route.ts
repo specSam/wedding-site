@@ -14,6 +14,7 @@ interface FaqRecord {
 }
 
 export async function GET() {
+  console.log(process.env.FAQ_TABLE_NAME);
   let result;
   try {
     result = await ddbDocClient.send(
