@@ -33,12 +33,6 @@ export default function RsvpGate() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-const mockGuest: Guest = {
-  guest_id: "smith-family",
-  name: "Sam",
-  allowed_guests: 4,
-};
-
   useEffect(() => {
     if (!guestParam) return;
     let cancelled = false;
