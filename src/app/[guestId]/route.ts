@@ -7,6 +7,7 @@ import {
   GUEST_ID_COOKIE,
   IS_ADMIN_COOKIE,
 } from "@/lib/guestCookies";
+import { absoluteUrl } from "@/lib/absoluteUrl";
 
 const GUESTS_TABLE_NAME = process.env.GUESTS_TABLE_NAME || "Guests";
 
@@ -22,7 +23,7 @@ export async function GET(
   const cookieStore = await cookies();
 
   if (cookieStore.get(GUEST_ID_COOKIE)?.value) {
-    return NextResponse.redirect(new URL("/story", request.url));
+    return NextResponse.redirect(absoluteUrl("/story", request));
   }
 
   const { guestId } = await params;
@@ -33,7 +34,7 @@ export async function GET(
   const guest = result.Item as GuestRecord | undefined;
 
   if (!guest) {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(absoluteUrl("/", request));
   }
 
   cookieStore.set(GUEST_ID_COOKIE, guest.guest_id, GUEST_COOKIE_OPTIONS);
@@ -43,5 +44,5 @@ export async function GET(
     GUEST_COOKIE_OPTIONS
   );
 
-  return NextResponse.redirect(new URL("/story", request.url));
+  return NextResponse.redirect(absoluteUrl("/story", request));
 }
