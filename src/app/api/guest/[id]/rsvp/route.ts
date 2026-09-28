@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { GetCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
 import { ddbDocClient } from "@/lib/dynamodb";
+import {
+  GUEST_COOKIE_OPTIONS,
+  GUEST_ID_COOKIE,
+  IS_ADMIN_COOKIE,
+} from "@/lib/guestCookies";
 
 const TABLE_NAME = process.env.GUESTS_TABLE_NAME || "Guests";
 
@@ -10,13 +15,6 @@ interface GuestRecord {
   allowed_guests: number;
   is_admin?: boolean;
 }
-
-const COOKIE_OPTIONS = {
-  httpOnly: true,
-  sameSite: "lax" as const,
-  secure: process.env.NODE_ENV === "production",
-  path: "/",
-};
 
 export async function POST(
   request: NextRequest,
@@ -64,8 +62,12 @@ export async function POST(
   );
 
   const cookieStore = await cookies();
-  cookieStore.set("guest_id", guest.guest_id, COOKIE_OPTIONS);
-  cookieStore.set("is_admin", guest.is_admin === true ? "true" : "false", COOKIE_OPTIONS);
+  cookieStore.set(GUEST_ID_COOKIE, guest.guest_id, GUEST_COOKIE_OPTIONS);
+  cookieStore.set(
+    IS_ADMIN_COOKIE,
+    guest.is_admin === true ? "true" : "false",
+    GUEST_COOKIE_OPTIONS
+  );
 
   return NextResponse.json({ success: true });
 }

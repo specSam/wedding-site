@@ -8,6 +8,7 @@ const links = [
   { href: "/story", label: "Our Story" },
   { href: "/faq", label: "FAQ" },
   { href: "/registry", label: "Registry" },
+  { href: "/rsvp", label: "RSVP" },
 ];
 
 export default function NavBar() {
